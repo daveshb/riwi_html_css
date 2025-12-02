@@ -151,5 +151,10 @@ Crea un documento HTML que incluya:
 7. Un enlace interno a otra sección.
 8. Dos comentarios explicativos.
 9. Un ejemplo visual del DOM representado con etiquetas reales.
+10. Adicione una imagen.
+
 
 Guarda el archivo como `actividad.html`.
+
+
+https://github.com/daveshb/riwi_html_css
