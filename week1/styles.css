@@ -1,0 +1,36 @@
+
+h1 {
+    color: blue;
+}
+
+h2{
+    color: chartreuse;
+}
+
+#parrafo1{
+    color: dodgerblue;
+    font-size: 20px;
+}
+
+.imagen_github{
+    width: 100px;
+    border: 1px red;
+
+}
+
+.imagen_github:hover{
+    opacity: .5;
+}
+
+section h2 {
+    color: blue;
+}
+
+
+.text1{
+    color: orange;
+}
+
+#text2 {
+    color: gray;
+}
