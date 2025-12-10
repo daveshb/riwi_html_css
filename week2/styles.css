@@ -1,0 +1,137 @@
+body {
+  padding: 100px 0 100px 0;
+  font-family: "Space Grotesk", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-around; /* flex-direction: column-reverse; */
+  align-items: center;
+  gap: 5px;
+  background-color: bisque;
+  height: 200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.article {
+  height: 60px;
+  width: 80px;
+  background-color: blue;
+  /* margin-right: 5px; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.logo {
+  height: 56px;
+  width: 220px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.link {
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.link__button {
+  border: 1px solid black;
+  padding: 20px 35px;
+  border-radius: 14px;
+}
+
+.sectionFirst {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionFirst__article {
+  width: 531px;
+  height: 481px;
+}
+
+.sectionFirst__img {
+  width: 600px;
+  height: 515px;
+}
+
+.sectionFirst__h1 {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.sectionFirst__p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.sectionFirst__button {
+  background-color: #191a23;
+  padding: 20px 35px;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.sectionFirst__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.sectionSecond__card {
+  width: 500px;
+  height: 210px;
+  background-color: #f3f3f3;
+  border-radius: 45px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionSecond__h3 {
+  font-size: 30px;
+  background-color: #b9ff66;
+  width: 207px;
+  font-weight: 500;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.sectionSecond__img {
+  width: 210px;
+  height: 166px;
+}
+
+.sectionSecond__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sectionSecond__a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sectionSecond_line1 {
+  display: flex;
+  gap: 40px;
+}
+
+.sectionSecond__card2 {
+  background-color: #b9ff66;
+}
