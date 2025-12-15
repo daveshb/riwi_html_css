@@ -135,3 +135,42 @@ body {
 .sectionSecond__card2 {
   background-color: #b9ff66;
 }
+
+.prueba__grid {
+  display: grid;
+  justify-items:center;
+  align-items: center;
+  /* grid-template-columns: 10% 1fr 2fr; */
+  grid-template-columns: repeat(4, 1fr) 2fr ;
+  /* grid-template-rows:2fr 1fr 1fr 1fr 1fr 1fr; */
+  gap: 20px;
+
+  background-color: bisque;
+  width: 800px;
+  height: 1200px;
+}
+
+.grid_interno {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  gap: 20px;
+}
+
+.item {
+  width: 110px;
+  height: 100px;
+  background-color: #b9ff66;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  padding: 5px;
+}
+
+.item__interno {
+  background-color: #387deb;
+}
+
+.links-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
