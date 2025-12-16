@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transiciones CSS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #ecf0f1;
+    }
+
+    .demo-section {
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Transición básica de color */
+    .box-color {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .box-color:hover {
+      background-color: #e74c3c;
+    }
+
+    /* Transición de tamaño */
+    .box-size {
+      width: 100px;
+      height: 100px;
+      background-color: #2ecc71;
+      transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .box-size:hover {
+      width: 200px;
+      height: 200px;
+    }
+
+    /* Transición de múltiples propiedades */
+    .box-multiple {
+      width: 120px;
+      height: 120px;
+      background-color: #f39c12;
+      border-radius: 0px;
+      transform: rotate(0deg);
+      transition: all 0.5s ease; /* Anima todas las propiedades */
+    }
+
+    .box-multiple:hover {
+      background-color: #9b59b6;
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    /* Diferentes timing functions */
+    .timing-box {
+      width: 80px;
+      height: 80px;
+      margin: 10px;
+      display: inline-block;
+      background-color: #1abc9c;
+      position: relative;
+      left: 0;
+    }
+
+    .timing-box:hover {
+      left: 200px;
+    }
+
+    .timing-linear {
+      transition: left 2s linear;
+    }
+
+    .timing-ease {
+      transition: left 2s ease;
+    }
+
+    .timing-ease-in {
+      transition: left 2s ease-in;
+    }
+
+    .timing-ease-out {
+      transition: left 2s ease-out;
+    }
+
+    .timing-ease-in-out {
+      transition: left 2s ease-in-out;
+    }
+
+    /* Transición con retraso */
+    .delay-box {
+      width: 100px;
+      height: 100px;
+      background-color: #e67e22;
+      margin: 10px;
+      display: inline-block;
+      opacity: 1;
+    }
+
+    .delay-box:nth-child(1) { transition: opacity 0.5s ease 0s; }
+    .delay-box:nth-child(2) { transition: opacity 0.5s ease 0.2s; }
+    .delay-box:nth-child(3) { transition: opacity 0.5s ease 0.4s; }
+    .delay-box:nth-child(4) { transition: opacity 0.5s ease 0.6s; }
+
+    .container-delay:hover .delay-box {
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Transiciones CSS</h2>
+
+  <div class="demo-section">
+    <h3>1. Transición de Color</h3>
+    <div class="box-color"></div>
+    <p>Pasa el ratón para ver la transición de color</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>2. Transición de Tamaño</h3>
+    <div class="box-size"></div>
+    <p>Pasa el ratón para ver el cambio de tamaño</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>3. Transición de Múltiples Propiedades</h3>
+    <div class="box-multiple"></div>
+    <p>Pasa el ratón para ver color, forma y rotación</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>4. Diferentes Timing Functions</h3>
+    <p>Pasa el ratón para ver la diferencia</p>
+    <div class="timing-box timing-linear">linear</div>
+    <div class="timing-box timing-ease">ease</div>
+    <div class="timing-box timing-ease-in">ease-in</div>
+    <div class="timing-box timing-ease-out">ease-out</div>
+    <div class="timing-box timing-ease-in-out">ease-in-out</div>
+  </div>
+
+  <div class="demo-section">
+    <h3>5. Transiciones con Retraso</h3>
+    <p>Pasa el ratón al contenedor para ver efecto en cascada</p>
+    <div class="container-delay">
+      <div class="delay-box"></div>
+      <div class="delay-box"></div>
+      <div class="delay-box"></div>
+      <div class="delay-box"></div>
+    </div>
+  </div>
+</body>
+</html>

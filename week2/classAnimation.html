@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Círculo Saltarín Animado</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1236d5 0%, #764ba2 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes rebotar {
+        0% {
+            position: absolute;
+            margin-left: 10px;
+        }
+        
+        30%{
+            position: absolute;
+             margin-left: 50px;
+        }
+        60% {
+            position: absolute;
+             margin-left: 70px;
+        }
+        
+        90%{
+            position: absolute;
+             margin-left: 80px;
+        }
+        100% {
+            position: absolute;
+             margin-left: 200px;;
+        }
+        
+    }
+
+    /* Animación del círculo saltarín */
+    /* @keyframes rebotar {
+      0% {
+        transform: translateY(0) scaleY(0.7) scaleX(1.15);
+      }
+      5% {
+        transform: translateY(-15px) scaleY(0.8) scaleX(1.1);
+      }
+      10% {
+        transform: translateY(-35px) scaleY(0.9) scaleX(1.05);
+      }
+      15% {
+        transform: translateY(-55px) scaleY(0.98) scaleX(1.01);
+      }
+      20% {
+        transform: translateY(-75px) scaleY(1.04) scaleX(0.99);
+      }
+      25% {
+        transform: translateY(-95px) scaleY(1.08) scaleX(0.97);
+      }
+      30% {
+        transform: translateY(-120px) scaleY(1.1) scaleX(0.96);
+      }
+      35% {
+        transform: translateY(-145px) scaleY(1.11) scaleX(0.95);
+      }
+      40% {
+        transform: translateY(-165px) scaleY(1.12) scaleX(0.94);
+      }
+      45% {
+        transform: translateY(-180px) scaleY(1.12) scaleX(0.94);
+      }
+      50% {
+        transform: translateY(-185px) scaleY(1.12) scaleX(0.95);
+      }
+      55% {
+        transform: translateY(-180px) scaleY(1.11) scaleX(0.96);
+      }
+      60% {
+        transform: translateY(-160px) scaleY(1.1) scaleX(0.97);
+      }
+      65% {
+        transform: translateY(-130px) scaleY(1.08) scaleX(0.98);
+      }
+      70% {
+        transform: translateY(-100px) scaleY(1.05) scaleX(0.99);
+      }
+      75% {
+        transform: translateY(-65px) scaleY(1.01) scaleX(1.02);
+      }
+      80% {
+        transform: translateY(-35px) scaleY(0.92) scaleX(1.07);
+      }
+      85% {
+        transform: translateY(-15px) scaleY(0.8) scaleX(1.12);
+      }
+      90% {
+        transform: translateY(-5px) scaleY(0.73) scaleX(1.14);
+      }
+      95% {
+        transform: translateY(-1px) scaleY(0.71) scaleX(1.15);
+      }
+      100% {
+        transform: translateY(0) scaleY(0.7) scaleX(1.15);
+      }
+    } */
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #fff, #3498db);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                  inset -2px -2px 8px rgba(0, 0, 0, 0.2);
+      /* animation: rebotar 2s ease-in-out infinite; */
+
+    background: linear-gradient(0deg,rgba(34, 193, 195, 1) 41%, rgba(253, 187, 45, 1) 100%);
+    box-shadow: 19px 10px 5px 23px rgba(0,0,0,0.43);
+-webkit-box-shadow: 19px 10px 5px 23px rgba(0,0,0,0.43);
+-moz-box-shadow: 19px 10px 5px 23px rgba(0,0,0,0.43);
+    }
+
+    .circle:hover{
+        transform: rotate(45deg);
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      color: white;
+      font-size: 1.2rem;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+
+    .floor {
+      position: absolute;
+      bottom: 20px;
+      width: 200px;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Círculo Saltarín</h1>
+    <div class="circle"></div>
+    <div class="floor"></div>
+  </div>
+</body>
+</html>

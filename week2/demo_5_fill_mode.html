@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation Fill Mode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #ecf0f1;
+    }
+
+    @keyframes moveBox {
+      0% {
+        transform: translateX(0);
+        background-color: #3498db;
+      }
+      100% {
+        transform: translateX(200px);
+        background-color: #e74c3c;
+      }
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      margin: 20px 0;
+      animation: moveBox 2s ease 1; /* No se repite */
+    }
+
+    /* none: Sin estilos finales */
+    .fill-none {
+      animation-fill-mode: none;
+    }
+
+    /* forwards: Mantiene los estilos finales */
+    .fill-forwards {
+      animation-fill-mode: forwards;
+    }
+
+    /* backwards: Usa estilos iniciales antes de comenzar */
+    .fill-backwards {
+      animation-fill-mode: backwards;
+      animation-delay: 1s;
+    }
+
+    /* both: forwards + backwards */
+    .fill-both {
+      animation-fill-mode: both;
+      animation-delay: 1s;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Animation Fill Mode</h2>
+
+  <p><strong>fill-mode: none</strong> - Vuelve al estilo original después</p>
+  <div class="box fill-none"></div>
+
+  <p><strong>fill-mode: forwards</strong> - Mantiene el estilo final</p>
+  <div class="box fill-forwards"></div>
+
+  <p><strong>fill-mode: backwards</strong> - Usa estilo inicial antes de comenzar</p>
+  <div class="box fill-backwards"></div>
+
+  <p><strong>fill-mode: both</strong> - Combina forwards y backwards</p>
+  <div class="box fill-both"></div>
+</body>
+</html>

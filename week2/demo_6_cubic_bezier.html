@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Bezier - Timing Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #ecf0f1;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(300px);
+      }
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      margin: 20px 0;
+      animation: move 3s 1; /* Sin repetición para ver el efecto */
+    }
+
+    .linear {
+      animation-timing-function: linear;
+    }
+
+    .ease {
+      animation-timing-function: ease;
+    }
+
+    .ease-in {
+      animation-timing-function: ease-in;
+    }
+
+    .ease-out {
+      animation-timing-function: ease-out;
+    }
+
+    .custom-bounce {
+      animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h2>Cubic Bezier - Timing Functions</h2>
+
+  <label>Linear</label>
+  <div class="box linear"></div>
+
+  <label>Ease (por defecto)</label>
+  <div class="box ease"></div>
+
+  <label>Ease In</label>
+  <div class="box ease-in"></div>
+
+  <label>Ease Out</label>
+  <div class="box ease-out"></div>
+
+  <label>Custom Bounce</label>
+  <div class="box custom-bounce"></div>
+
+  <p><em>Herramienta: https://cubic-bezier.com/</em></p>
+</body>
+</html>

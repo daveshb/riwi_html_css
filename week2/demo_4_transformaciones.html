@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformaciones en Animaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #ecf0f1;
+    }
+
+    .container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      margin: 20px 0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Translate */
+    @keyframes moveRight {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(200px);
+      }
+    }
+
+    .box-translate {
+      animation: moveRight 2s ease infinite;
+    }
+
+    /* Rotate */
+    @keyframes fullRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .box-rotate {
+      background-color: #e74c3c;
+      animation: fullRotate 2s linear infinite;
+    }
+
+    /* Scale */
+    @keyframes grow {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }
+
+    .box-scale {
+      background-color: #2ecc71;
+      animation: grow 2s ease infinite;
+    }
+
+    /* Skew */
+    @keyframes skewIt {
+      0%, 100% {
+        transform: skewX(0deg);
+      }
+      50% {
+        transform: skewX(30deg);
+      }
+    }
+
+    .box-skew {
+      background-color: #f39c12;
+      animation: skewIt 2s ease infinite;
+    }
+
+    /* Combinado */
+    @keyframes combined {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      50% {
+        transform: translate(150px, -50px) scale(1.2) rotate(180deg);
+      }
+      100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+      }
+    }
+
+    .box-combined {
+      background-color: #9b59b6;
+      animation: combined 3s ease infinite;
+    }
+
+    /* Asegurar que todas las animaciones están constantemente activas */
+    .box-translate,
+    .box-rotate,
+    .box-scale,
+    .box-skew,
+    .box-combined {
+      animation-play-state: running;
+    }
+  </style>
+</head>
+<body>
+  <h2>Transformaciones en Animaciones</h2>
+
+  <h3>Translate (Mover)</h3>
+  <div class="box box-translate">Translate</div>
+
+  <h3>Rotate (Girar)</h3>
+  <div class="box box-rotate">Rotate</div>
+
+  <h3>Scale (Escalar)</h3>
+  <div class="box box-scale">Scale</div>
+
+  <h3>Skew (Sesgar)</h3>
+  <div class="box box-skew">Skew</div>
+
+  <h3>Combinado</h3>
+  <div class="box box-combined">Combined</div>
+</body>
+</html>

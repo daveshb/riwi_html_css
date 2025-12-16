@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyframes Detallado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+
+    .demo-section {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Keyframes simples (from - to) */
+    @keyframes simpleFade {
+      from {
+        opacity: 1;
+        color: black;
+      }
+      to {
+        opacity: 0;
+        color: transparent;
+      }
+    }
+
+    /* Keyframes con múltiples puntos */
+    @keyframes colorChange {
+      0% {
+        background-color: #ff0000;
+      }
+      25% {
+        background-color: #00ff00;
+      }
+      50% {
+        background-color: #0000ff;
+      }
+      75% {
+        background-color: #ffff00;
+      }
+      100% {
+        background-color: #ff0000;
+      }
+    }
+
+    /* Keyframes con múltiples propiedades */
+    @keyframes slideAndFade {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px 0;
+    }
+
+    .box-fade {
+      background-color: #3498db;
+      animation: simpleFade 2s ease infinite;
+    }
+
+    .box-color {
+      animation: colorChange 4s ease infinite;
+    }
+
+    .box-complex {
+      background-color: #9b59b6;
+      animation: slideAndFade 3s ease infinite;
+    }
+  </style>
+</head>
+<body>
+  <h2>Keyframes Detallado</h2>
+
+  <div class="demo-section">
+    <h3>Keyframes Simple (from - to)</h3>
+    <div class="box box-fade"></div>
+  </div>
+
+  <div class="demo-section">
+    <h3>Keyframes con Múltiples Puntos (Cambio de Color)</h3>
+    <div class="box box-color"></div>
+  </div>
+
+  <div class="demo-section">
+    <h3>Keyframes Complejos (Deslizamiento + Opacidad)</h3>
+    <div class="box box-complex"></div>
+  </div>
+</body>
+</html>

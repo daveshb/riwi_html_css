@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animaciones CSS con Keyframes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #ecf0f1;
+    }
+
+    .demo-section {
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Animación básica */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(300px);
+      }
+    }
+
+    .box-slide {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      animation: slide 2s ease infinite;
+    }
+
+    /* Animación con múltiples keyframes */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-50px);
+      }
+    }
+
+    .box-bounce {
+      width: 80px;
+      height: 80px;
+      background-color: #2ecc71;
+      animation: bounce 1s ease infinite;
+    }
+
+    /* Animación de rotación */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .box-spin {
+      width: 100px;
+      height: 100px;
+      background-color: #e74c3c;
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+    }
+
+    /* Animación de opacity */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .box-fade {
+      width: 150px;
+      height: 150px;
+      background-color: #f39c12;
+      animation: fadeInOut 3s ease infinite;
+    }
+
+    /* Animación compleja */
+    @keyframes complexAnimation {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        background-color: #9b59b6;
+      }
+      25% {
+        transform: translate(100px, -50px) scale(1.2) rotate(90deg);
+        background-color: #3498db;
+      }
+      50% {
+        transform: translate(150px, 0) scale(1) rotate(180deg);
+        background-color: #2ecc71;
+      }
+      75% {
+        transform: translate(100px, 50px) scale(1.2) rotate(270deg);
+        background-color: #e74c3c;
+      }
+      100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+        background-color: #9b59b6;
+      }
+    }
+
+    .box-complex {
+      width: 80px;
+      height: 80px;
+      animation: complexAnimation 4s ease infinite;
+    }
+
+    /* Animación con retraso */
+    .loading {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes loadingBounce {
+      0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    .loading-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #1abc9c;
+      animation: loadingBounce 0.8s ease infinite;
+    }
+
+    .loading-dot:nth-child(1) { animation-delay: 0s; }
+    .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+    .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Animación con pausa */
+    .box-paused {
+      width: 100px;
+      height: 100px;
+      background-color: #e67e22;
+      animation: slide 3s ease infinite;
+      margin-bottom: 1rem;
+    }
+
+    .box-paused:hover {
+      animation-play-state: paused;
+    }
+
+    p.small {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <h2>Animaciones CSS con Keyframes</h2>
+
+  <div class="demo-section">
+    <h3>1. Animación Básica (Deslizamiento)</h3>
+    <div class="box-slide"></div>
+    <p class="small">Se desliza hacia la derecha infinitamente</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>2. Animación de Rebote</h3>
+    <div class="box-bounce"></div>
+    <p class="small">Efecto de rebote hacia arriba</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>3. Animación de Rotación</h3>
+    <div class="box-spin"></div>
+    <p class="small">Gira continuamente</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>4. Animación de Opacidad (Fade In/Out)</h3>
+    <div class="box-fade"></div>
+    <p class="small">Aparece y desaparece gradualmente</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>5. Animación Compleja</h3>
+    <div class="box-complex"></div>
+    <p class="small">Combina múltiples transformaciones</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>6. Animación con Retraso (Loading)</h3>
+    <div class="loading">
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+    </div>
+    <p class="small">Efecto de carga con puntos en cascada</p>
+  </div>
+
+  <div class="demo-section">
+    <h3>7. Animación con Pausa (Hover para pausar)</h3>
+    <div class="box-paused"></div>
+    <p class="small">Pasa el ratón para pausar la animación</p>
+  </div>
+</body>
+</html>
