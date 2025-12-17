@@ -34,7 +34,7 @@
       backdrop-filter: blur(10px);
     }
 
-    @keyframes rebotar {
+    /* @keyframes rebotar {
         0% {
             position: absolute;
             margin-left: 10px;
@@ -58,10 +58,10 @@
              margin-left: 200px;;
         }
         
-    }
+    } */
 
     /* Animación del círculo saltarín */
-    /* @keyframes rebotar {
+    @keyframes rebotar {
       0% {
         transform: translateY(0) scaleY(0.7) scaleX(1.15);
       }
@@ -125,16 +125,16 @@
       100% {
         transform: translateY(0) scaleY(0.7) scaleX(1.15);
       }
-    } */
+    }
 
     .circle {
       width: 80px;
       height: 80px;
       background: radial-gradient(circle at 30% 30%, #fff, #3498db);
-      border-radius: 10px;
+      border-radius: 50%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
                   inset -2px -2px 8px rgba(0, 0, 0, 0.2);
-      /* animation: rebotar 2s ease-in-out infinite; */
+      animation: rebotar 3s ease-in-out infinite;
 
     background: linear-gradient(0deg,rgba(34, 193, 195, 1) 41%, rgba(253, 187, 45, 1) 100%);
     box-shadow: 19px 10px 5px 23px rgba(0,0,0,0.43);
